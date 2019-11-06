@@ -1,0 +1,5 @@
+{
+  "env": {
+    "MONGO_URL": "mongodb+srv://jrendall:05AdSeRau9XrNwHg@cluster0-aq1lb.mongodb.net/test?retryWrites=true&w=majority"
+  }
+}

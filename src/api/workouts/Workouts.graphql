@@ -1,0 +1,26 @@
+# All of this will be available to the API
+scalar Date
+type Workout {
+  _id: ID!
+  name: String!
+  events: [Event]
+}
+type Event {
+  _id: ID!
+  date: Date
+}
+
+input WorkoutInput {
+  _id: ID
+  name: String!
+}
+
+type Mutation {
+  addWorkout(workout: WorkoutInput): Workout
+  addEvent(workoutId: ID, date: Date): Workout
+  removeEvent(workoutId: ID, eventId: ID): Workout
+}
+
+type Query {
+  workouts: [Workout]
+}

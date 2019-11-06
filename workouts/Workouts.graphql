@@ -1,0 +1,18 @@
+# All of this will be available to the API
+type Workout {
+  _id: ID!
+  name: String!
+}
+
+input WorkoutInput {
+  _id: ID
+  name: String!
+}
+
+type Mutation {
+  addWorkout(workout: WorkoutInput): Workout
+}
+
+type Query {
+  workouts: [Workout]
+}
